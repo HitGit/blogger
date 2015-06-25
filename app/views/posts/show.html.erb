@@ -1,0 +1,14 @@
+<h1><%= @post.title %></h1>
+<p>
+  <%= @post.body %>
+</p>
+
+<ul>
+  <% @post.categories.each do |category| %>
+    <li><%=link_to category.name, category %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', '/posts' %>&nbsp;<%= link_to 'Edit', "/posts/#{@post.id}/edit" %>
+
+

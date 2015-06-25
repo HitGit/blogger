@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  database: blogger_development
+  user: postgres
+  password: postgres
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: blogger_test
+  user: postgres
+  password: postgres
+  host: localhost
+

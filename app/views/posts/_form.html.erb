@@ -1,0 +1,16 @@
+<% if @post.errors.any? %>
+<ul>
+  <% @post.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for @post do |f| %>
+  <label>Title<%= f.text_field :title %></label><%= error_messages_on @post, :title %><br>
+  <label>Body<%= f.text_area :body, rows: 8, cols: 40 %></label><%= error_messages_on @post, :body %><br>
+  <%= render partial: 'category_picker' %><br>
+<input type="submit" name="submit" value="Post!">
+<% end %>
+
+

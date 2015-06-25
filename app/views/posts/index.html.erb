@@ -1,0 +1,19 @@
+<h1>Posts</h1>
+
+<table>
+  <% @posts.each do |post| %>
+
+  <tr>
+    <td><%= link_to post.title, "/posts/#{post.id}" %></td>
+    <td><%= button_to 'X', "/posts/#{post.id}", method: 'delete' %></td>
+  </tr>
+
+<% end %>
+
+</table>
+<br>
+
+<%= button_to 'New', '/posts/new', method: :get %>
+
+
+
